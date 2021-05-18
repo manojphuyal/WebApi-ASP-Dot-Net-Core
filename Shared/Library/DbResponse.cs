@@ -9,7 +9,6 @@ namespace Shared.Library
         public string Code { get; set; }
         public string Message { get; set; }
         public string Id { get; set; }
-
         public string Extra { get; set; }
     }
 }

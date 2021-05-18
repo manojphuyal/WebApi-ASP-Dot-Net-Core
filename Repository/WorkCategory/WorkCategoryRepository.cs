@@ -13,11 +13,6 @@ namespace Repository.WorkCategory
 {
     public class WorkCategoryRepository : IWorkCategoryRepository
     {
-        //private readonly IConfiguration _configuration;
-        //public WorkCategoryRepository(IConfiguration configuration)
-        //{
-        //    this._configuration = configuration;
-        //}
         private readonly IDataAccess _dataAccess;
         public WorkCategoryRepository(IDataAccess dataAccess)
         {
@@ -111,7 +106,6 @@ namespace Repository.WorkCategory
                     Code = dt["Code"].ToString(),
                     Message = dt["Message"].ToString(),
                     Extra = dt["Extra"].ToString()
-
                 };
                 return response;
             }
@@ -143,136 +137,5 @@ namespace Repository.WorkCategory
                 return result;
             }
         }
-        //public void Add(WorkCategoryModel obj)
-        //{
-        //    try
-        //    {
-        //        using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DBCon")))
-        //        {
-        //            con.Open();
-        //            DynamicParameters param = new DynamicParameters();
-        //            param.Add("@CategoryName", obj.CategoryName);
-        //            param.Add("@SubCategoryName", obj.SubCategoryName);
-
-        //            con.Execute("InsertDiseases", param, commandType: System.Data.CommandType.StoredProcedure);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-        //public List<WorkCategoryModel> List()
-        //{
-        //    try
-        //    {
-        //        using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DBCon")))
-        //        {
-        //            con.Open();
-        //            var data = con.Query<WorkCategoryModel>("Sp_WorkCategoryList", commandType: System.Data.CommandType.StoredProcedure).ToList();
-        //            return data;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-        //public WorkCategoryModel GetById(int id)
-        //{
-        //    try
-        //    {
-        //        using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DBCon")))
-        //        {
-        //            con.Open();
-        //            DynamicParameters param = new DynamicParameters();
-        //            param.Add("@id", id);
-        //            var data = SqlMapper.Query<WorkCategoryModel>(con,"Sp_WorkCategoryGetById",param, commandType: System.Data.CommandType.StoredProcedure).FirstOrDefault();
-        //            return data;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}     
-        //public WorkCategoryModel List()
-        //{
-        //    try
-        //    {
-        //        using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DBCon")))
-        //        {
-        //            WorkCategoryModel pd = new WorkCategoryModel();
-        //            var sql = "Exec proc_WorkCategory @flag='GetAll'";
-        //            var dt = dao.ExecuteDataTable(sql);
-        //            if (dt != null)
-        //            {
-        //                foreach (DataRow row in dt.Rows)
-        //                {
-        //                    //pd.Id = row["Id"];
-        //                    pd.CreatedBy = row["CreatedBy"].ToString();
-        //                    pd.CreatedDate = row["CreatedDate"].ToString();
-        //                    pd.Description = row["Description"].ToString();
-        //                    pd.ImageUrl = row["ImageUrl"].ToString();
-        //                    pd.WorkType = row["WorkType"].ToString();
-        //                    pd.CategoryName = row["CategoryName"].ToString();
-        //                    pd.SubCategoryName = row["SubCategoryName"].ToString();
-        //                }
-        //                return pd;
-        //            }
-        //            else
-        //            {
-        //                pd.Code = 0;
-        //                pd.Message = "No data found";
-        //                return pd;
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-        //public WorkCategoryModel GetById(int id)
-        //{
-        //    try
-        //    {
-        //        using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DBCon")))
-        //        {
-        //            WorkCategoryModel pd = new WorkCategoryModel();
-        //            var sql = "Exec proc_WorkCategory @flag='GetById'";
-        //            sql += ", @id=" + id;
-        //            //sql += ", @id=" + dao.FilterString(id.ToString());
-        //            var dt = dao.ExecuteDataTable(sql);
-        //            if (dt != null)
-        //            {
-        //                foreach (DataRow row in dt.Rows)
-        //                {
-        //                    //pd.Id = row["Id"];
-        //                    pd.CreatedBy = row["CreatedBy"].ToString();
-        //                    pd.CreatedDate = row["CreatedDate"].ToString();
-        //                    pd.Description = row["Description"].ToString();
-        //                    pd.ImageUrl = row["ImageUrl"].ToString();
-        //                    pd.WorkType = row["WorkType"].ToString();
-        //                    pd.CategoryName = row["CategoryName"].ToString();
-        //                    pd.SubCategoryName = row["SubCategoryName"].ToString();
-        //                }
-        //                return pd;
-
-        //            }
-        //            else
-        //            {
-
-        //                pd.Code = 0;
-        //                pd.Message = "No data found";
-        //                return pd;
-        //            }
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
     }
 }

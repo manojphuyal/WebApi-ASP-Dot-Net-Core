@@ -40,14 +40,6 @@ namespace FreelanceWebApi.Controllers
             return Ok(dt);
         }
 
-        //[Route("GetById/{id}")]
-        //[HttpPost]
-        //public WorkCategoryModel GetById(int? id)
-        //{
-        //    var dt = (_category.GetById(id));
-        //    return dt;
-        //}
-
         [Route("Create")]
         [HttpPost]
         public DbResponse Create(WorkCategoryModel model)

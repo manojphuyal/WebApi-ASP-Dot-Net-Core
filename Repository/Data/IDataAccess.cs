@@ -10,11 +10,9 @@ namespace Repository.Data
     {
         string GetConnectionString();
         int GetCommandTimeOut();
-        DataSet ExecuteDataset(string sql);  //This is for more than one table
-        //DataSet ExecuteDatasetAsync(string sql);  //This is for more than one table
-        DataTable ExecuteDataTable(string sql); //This is for List of Data
-        DataRow ExecuteDataRow(string sql); //This is for one data
-        //DataRow ExecuteDataRowAsync(string sql); //This is for one data
+        DataSet ExecuteDataset(string sql);  
+        DataTable ExecuteDataTable(string sql); 
+        DataRow ExecuteDataRow(string sql);
         string FilterString(string strVal);
         string FilterXmlString(string strVal);
         string FilterXmlNodeString(string strVal);

@@ -30,7 +30,4 @@ namespace Shared.WorkCategory
         public string CategoryCode { get; set; }
         public string SubCategoryName { get; set; }
     }
-
-
-
 }

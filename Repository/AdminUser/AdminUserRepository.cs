@@ -27,7 +27,6 @@ namespace Repository.AdminUser
             foreach (DataRow dr in dt.Rows)
             {
                 var details = new AdminUserModel();
-                //pd.Id = row["Id"];
                 details.FullName = dr["FullName"].ToString();
                 details.Post = dr["Post"].ToString();
                 details.Role = dr["Role"].ToString();
